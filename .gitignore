@@ -1,0 +1,15 @@
+# Virtual environment
+mcproj/
+
+# VS Code
+.vscode/
+
+# STM32 project settings
+Vision_Controlled_Robot_MCProject/.settings/
+
+# Build output
+Vision_Controlled_Robot_MCProject/build/
+
+# Python
+__pycache__/
+*.pyc
