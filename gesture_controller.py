@@ -5,7 +5,18 @@ import time
 from pathlib import Path
 from collections import deque, Counter
 from typing import Any
+import serial
 
+PORT = "COM7"       # change to your HC-05 port
+BAUDRATE = 9600
+
+try:
+    bluetooth = serial.Serial(port=PORT, baudrate=BAUDRATE, timeout=1)
+    bluetooth_connected = True
+    print("Bluetooth connected.")
+except serial.SerialException as e:
+    bluetooth_connected = False
+    print(f"Bluetooth not connected: {e}")
 
 # ============================================================
 # CONFIGURATION
@@ -808,7 +819,7 @@ previous_time = time.time()
 
 stable_gesture = "NO HAND"
 stable_command = "X"
-
+last_sent_command = "X"
 
 print()
 print("==========================================")
@@ -916,6 +927,13 @@ while True:
 
         stable_gesture, stable_command = stable_result
 
+        # Terminal output test
+        if stable_command != "X" and stable_command != last_sent_command:
+            print(f"COMMAND: {stable_command}")
+            if bluetooth_connected:
+                bluetooth.write(stable_command.encode("ascii"))
+            last_sent_command = stable_command
+
         if stable_command != "X":
             lock_text = f"LOCKED: {stable_gesture}"
         else:
@@ -964,7 +982,9 @@ while True:
 
         stable_gesture = "NO HAND"
         stable_command = "X"
-
+        last_sent_command = "X"
+        if bluetooth_connected:
+            bluetooth.write(b"S")
 
     # --------------------------------------------------------
     # FPS
@@ -1054,5 +1074,8 @@ cap.release()
 cv2.destroyAllWindows()
 
 hands.close()
+
+if bluetooth_connected:
+    bluetooth.close()
 
 print("Controller stopped.")
