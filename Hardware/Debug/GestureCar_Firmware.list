@@ -695,15 +695,15 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  80004dc:	4878      	ldr	r0, [pc, #480]	@ (80006c0 <HAL_UART_RxCpltCallback+0x23c>)
  80004de:	f000 fdd9 	bl	8001094 <HAL_GPIO_WritePin>
 
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 600);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 800);
  80004e2:	4b78      	ldr	r3, [pc, #480]	@ (80006c4 <HAL_UART_RxCpltCallback+0x240>)
  80004e4:	681b      	ldr	r3, [r3, #0]
- 80004e6:	f44f 7216 	mov.w	r2, #600	@ 0x258
+ 80004e6:	f44f 7248 	mov.w	r2, #800	@ 0x320
  80004ea:	635a      	str	r2, [r3, #52]	@ 0x34
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 600);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 800);
  80004ec:	4b75      	ldr	r3, [pc, #468]	@ (80006c4 <HAL_UART_RxCpltCallback+0x240>)
  80004ee:	681b      	ldr	r3, [r3, #0]
- 80004f0:	f44f 7216 	mov.w	r2, #600	@ 0x258
+ 80004f0:	f44f 7248 	mov.w	r2, #800	@ 0x320
  80004f4:	639a      	str	r2, [r3, #56]	@ 0x38
 
     	    motorRunning = 1;
@@ -754,15 +754,15 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  800054e:	485c      	ldr	r0, [pc, #368]	@ (80006c0 <HAL_UART_RxCpltCallback+0x23c>)
  8000550:	f000 fda0 	bl	8001094 <HAL_GPIO_WritePin>
 
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 600);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 800);
  8000554:	4b5b      	ldr	r3, [pc, #364]	@ (80006c4 <HAL_UART_RxCpltCallback+0x240>)
  8000556:	681b      	ldr	r3, [r3, #0]
- 8000558:	f44f 7216 	mov.w	r2, #600	@ 0x258
+ 8000558:	f44f 7248 	mov.w	r2, #800	@ 0x320
  800055c:	635a      	str	r2, [r3, #52]	@ 0x34
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 600);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 800);
  800055e:	4b59      	ldr	r3, [pc, #356]	@ (80006c4 <HAL_UART_RxCpltCallback+0x240>)
  8000560:	681b      	ldr	r3, [r3, #0]
- 8000562:	f44f 7216 	mov.w	r2, #600	@ 0x258
+ 8000562:	f44f 7248 	mov.w	r2, #800	@ 0x320
  8000566:	639a      	str	r2, [r3, #56]	@ 0x38
 
     	    motorRunning = 1;
@@ -813,15 +813,15 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  80005c0:	483f      	ldr	r0, [pc, #252]	@ (80006c0 <HAL_UART_RxCpltCallback+0x23c>)
  80005c2:	f000 fd67 	bl	8001094 <HAL_GPIO_WritePin>
 
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 500);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 700);
  80005c6:	4b3f      	ldr	r3, [pc, #252]	@ (80006c4 <HAL_UART_RxCpltCallback+0x240>)
  80005c8:	681b      	ldr	r3, [r3, #0]
- 80005ca:	f44f 72fa 	mov.w	r2, #500	@ 0x1f4
+ 80005ca:	f44f 722f 	mov.w	r2, #700	@ 0x2bc
  80005ce:	635a      	str	r2, [r3, #52]	@ 0x34
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 500);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 700);
  80005d0:	4b3c      	ldr	r3, [pc, #240]	@ (80006c4 <HAL_UART_RxCpltCallback+0x240>)
  80005d2:	681b      	ldr	r3, [r3, #0]
- 80005d4:	f44f 72fa 	mov.w	r2, #500	@ 0x1f4
+ 80005d4:	f44f 722f 	mov.w	r2, #700	@ 0x2bc
  80005d8:	639a      	str	r2, [r3, #56]	@ 0x38
 
     	    motorRunning = 1;
@@ -872,15 +872,15 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  8000632:	4823      	ldr	r0, [pc, #140]	@ (80006c0 <HAL_UART_RxCpltCallback+0x23c>)
  8000634:	f000 fd2e 	bl	8001094 <HAL_GPIO_WritePin>
 
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 500);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 700);
  8000638:	4b22      	ldr	r3, [pc, #136]	@ (80006c4 <HAL_UART_RxCpltCallback+0x240>)
  800063a:	681b      	ldr	r3, [r3, #0]
- 800063c:	f44f 72fa 	mov.w	r2, #500	@ 0x1f4
+ 800063c:	f44f 722f 	mov.w	r2, #700	@ 0x2bc
  8000640:	635a      	str	r2, [r3, #52]	@ 0x34
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 500);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 700);
  8000642:	4b20      	ldr	r3, [pc, #128]	@ (80006c4 <HAL_UART_RxCpltCallback+0x240>)
  8000644:	681b      	ldr	r3, [r3, #0]
- 8000646:	f44f 72fa 	mov.w	r2, #500	@ 0x1f4
+ 8000646:	f44f 722f 	mov.w	r2, #700	@ 0x2bc
  800064a:	639a      	str	r2, [r3, #56]	@ 0x38
 
     	    motorRunning = 1;

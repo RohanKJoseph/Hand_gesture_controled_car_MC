@@ -316,8 +316,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);   // BIN1
     	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);  // BIN2
 
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 600);
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 600);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 800);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 800);
 
     	    motorRunning = 1;
     	    lastCommandTick = HAL_GetTick();
@@ -331,8 +331,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
     	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
 
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 600);
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 600);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 800);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 800);
 
     	    motorRunning = 1;
     	    lastCommandTick = HAL_GetTick();
@@ -346,8 +346,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
     	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
 
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 500);
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 500);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 700);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 700);
 
     	    motorRunning = 1;
     	    lastCommandTick = HAL_GetTick();
@@ -361,8 +361,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
     	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
 
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 500);
-    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 500);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 700);
+    	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 700);
 
     	    motorRunning = 1;
     	    lastCommandTick = HAL_GetTick();
