@@ -104,7 +104,7 @@ Vehicle Movement
 
 The circuit diagram shows the hardware connections between the STM32 microcontroller, HC-05 Bluetooth module, TB6612FNG motor driver, DC motors, and power supply.
 
-![Circuit diagram of the Wireless Gesture-Controlled Motor Vehicle](images/circuit-diagram.png)
+![Circuit diagram of the Wireless Gesture-Controlled Motor Vehicle](images/circuit_diagram.png)
 
 The major connections include:
 
