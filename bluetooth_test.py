@@ -1,7 +1,7 @@
 import serial
 import time
 
-PORT = "COM7"       # CHANGE THIS
+PORT = "COM4"       # CHANGE THIS
 BAUDRATE = 9600
 
 try:
@@ -24,15 +24,15 @@ try:
         if command == "Q":
             break
 
+        print(f"Received command: {command}")
         if command in ["F", "B", "L", "R", "S"]:
 
-            bluetooth.write(
-                command.encode("ascii")
-            )
+            print("Sending byte...")
+            bytes_sent = bluetooth.write(command.encode("ascii"))
+            bluetooth.flush()
 
-            print(
-                f"Sent: {command}"
-            )
+            print(f"Sent: {command}, bytes written: {bytes_sent}")
+
 
         else:
 
