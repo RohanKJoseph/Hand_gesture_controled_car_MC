@@ -314,7 +314,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_SET);   // AIN1
     	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET); // AIN2
     	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);   // BIN1
-    	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);  // BIN2
+    	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN
+            _8, GPIO_PIN_RESET);  // BIN2
 
     	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 800);
     	    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 800);
